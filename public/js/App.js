@@ -157,6 +157,7 @@ class App {
     this.state = state;
 
     if (state === "user-logged") {
+      this.pages.transactions.lastOptions = null;
       this.update();
     }
     if (state === "init") {
@@ -204,6 +205,7 @@ class App {
   }
 
   static updateForms() {
+    
     this.getForm("createIncome").renderAccountsList();
     this.getForm("createExpense").renderAccountsList();
   }
